@@ -1,14 +1,16 @@
 // Reset
-@import "less/reset";
+@import "../less/reset";
 
 // Core variables and mixins
-@import "less/variables"; 
-@import "less/mixins";
-@import "less/layouts";
+@import "../less/variables"; 
+@import "../less/mixins";
+@import "../less/layouts";
 
 // Components
-@import "less/buttons";
-@import "less/grid";
+@import "../less/buttons";
+@import "../less/grid";
+@import "../less/forms";
+@import "../less/button-groups";
 
 .navbar-fixed-top {
 	top: 0px;
@@ -20,7 +22,7 @@
 
 .navbar {
 	width: 100%;
-	background-color: red;
+	background-color: #673d94;
 	min-height: 30px;
 }
 
@@ -30,5 +32,9 @@ section #content {
 
 body {
   font: 12px Helvetica;
+}
+
+#logo {
+  margin: 20px auto;
 }
 
