@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
 	<script>
 	$(document).ready(function() {
 	  
@@ -63,20 +64,46 @@
         
         <!-- .information_body -->
         <div class="span10" id="information_body">
-          
           <h1>Propostas cadastradas</h1>
           
           <div class="row">
-            
-            <div class="alert">
-              <button type="button" class="close" data-dismiss="alert">×</button>
-              <strong>Warning!</strong> Best check yo self, you're not looking too good.
-            </div>
-            
-            <div class="span8 offset1">
+            <div class="span9 offset_custom_space">
+              
+              <div class="alert">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Warning!</strong> Best check yo self, you're not looking too good.
+              </div>
+              
               <div class="well">
                 <a href="#" class="btn">Voltar</a>
               </div>
+              
+              <!-- form -->
+              <form action="index_submit" method="POST" class="form-vertical">
+                <div class="span4">
+                  <label>ID do cliente
+                  <input type="text" name="search" class="" /> 
+                  </label>
+                  
+                  <label>Código
+                  <input type="text" name="search" class="" /> 
+                  </label>
+                </div>
+                <div class="span4">
+                  <label>Região
+                  <select name="search" class="">
+                    <option>Valor 1</option>
+                    <option>Valor 1</option>
+                    <option>Valor 1</option>
+                  </select> 
+                  </label>
+                  
+                  <label>Cliente
+                  <input type="text" name="search" class="" /> 
+                  </label>
+                </div>
+              </form>
+              <!--/.form -->
               
               <table class="table table-striped">
                 <thead>
