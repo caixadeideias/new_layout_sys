@@ -4,13 +4,72 @@
 // Core variables and mixins
 @import "../less/variables"; 
 @import "../less/mixins";
+@import "../less/sprites";
 @import "../less/layouts";
 
 // Components
 @import "../less/buttons";
+@import "../less/dropdowns";
+@import "../less/alerts";
+@import "../less/wells";
 @import "../less/grid";
 @import "../less/forms";
+@import "../less/tables";
 @import "../less/button-groups";
+
+// Custom
+a {
+  &:hover, &:link, &:visited, &:active { text-decoration: none; }
+}
+
+h1 {
+  font-weight: normal;
+  line-height: 3em;
+  padding-left: 20px;
+  margin-top: 0px;
+  color: #666666;
+  text-shadow: -1px -2px 1px white;
+  background: #cbcbcc url("../img/bg_h1.png") repeat-x top center;
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+ul#left_menu {
+  font-size: 13px;
+  font-weight: bold; 
+  padding: 0px;
+  
+  li {
+    margin: 6px 0px;
+    padding: 0px;
+    
+    a {
+      display: block;
+      padding: 6px 0px;
+      color: #666666;
+      
+      i { margin-right: 5px; margin-left: 4px; }
+      &:hover { background-color: #e5e3de; }
+    }
+  }
+}
+
+#logo {
+  margin-top: -6px;
+}
+
+#top_menu {
+  padding-top: 15px;
+}
+
+div#information_body {
+  .border-radius(6px);
+  background-color: white; 
+}
 
 .navbar-fixed-top {
 	top: 0px;
@@ -26,15 +85,11 @@
 	min-height: 30px;
 }
 
-section #content {
-	margin-top: 50px;
+section#content {
+	margin-top: 80px;
 }
 
 body {
   font: 12px Helvetica;
+  background-color: #f3f1ec;
 }
-
-#logo {
-  margin: 20px auto;
-}
-

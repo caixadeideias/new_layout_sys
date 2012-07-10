@@ -5,32 +5,38 @@
 	<title>Sys Sphinx</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script>
+	$(document).ready(function() {
+	  
+	});
+	</script>
 </head>
 
 <body>
 
   <div class="navbar navbar-fixed-top">
     <div class="container">
-      <div class="row">
-        <div class="span3">
-          <img src="images/logo_sphinx.png" id="logo" />
+      <div class="row" id="top_menu">
+        <div class="span2">
+          <img src="img/logo_sphinx.png" id="logo" />
         </div>
       
-        <div class="span5">
+        <div class="span6">
           <form action="index_submit" method="POST" class="form-search">
-            <input type="text" name="search" value="" /> 
+            <input type="text" name="search" class="span4" /> 
             <input type="submit" value="Filtrar por nome" class="btn btn-info" />
           </form>
         </div>
         
-        <div class="btn-group span4">
+        <div class="btn-group span3 offset1">
           <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-            Raquel Janissek Muniz Nome Grande
+            Raquel Janissek Muniz
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li>Editar minha conta</li>
-            <li>Logout</li>
+            <li><a href="#">Editar minha conta</a></li>
+            <li><a href="#">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -40,170 +46,102 @@
   <div class="container">
     
     <section id="content">
-      <div class="page-header">
-        <h1>Default grid system <small>12 columns with a responsive twist</small></h1>
-      </div>
+      <div class="row">
+        
+        <!-- menu -->
+        <div class="span2">
+          <ul id="left_menu" class="unstyled">
+            <li><a href="#"><i class="icon-home"></i>Dashboard</a></li>
+            <li><a href="#"><i class="icon-list-alt"></i>Propostas</a></li>
+            <li><a href="#"><i class="icon-user"></i>Contatos</a></li>
+            <li><a href="#"><i class="icon-barcode"></i>Licenças</a></li>
+            <li><a href="#"><i class="icon-book"></i>Produtos/Serviços</a></li>
+            <li><a href="#"><i class="icon-wrench"></i>Cadastros gerais</a></li>
+          </ul>
+        </div>
+        <!--./menu -->
+        
+        <!-- .information_body -->
+        <div class="span10" id="information_body">
+          
+          <h1>Propostas cadastradas</h1>
+          
+          <div class="row">
+            
+            <div class="alert">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <strong>Warning!</strong> Best check yo self, you're not looking too good.
+            </div>
+            
+            <div class="span8 offset1">
+              <div class="well">
+                <a href="#" class="btn">Voltar</a>
+              </div>
+              
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Responsável</th>
+                    <th>Nome do cliente</th>
+                    <th>Data</th>
+                    <th>Finalizada?</th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>11234567</td>
+                    <td>Raquel Janissesk-Muniz</td>
+                    <td>Geórgia Janissesk-Muniz</td>
+                    <td>18/04/2012</td>
+                    <td>Sim</td>
+                    <td>
+                      <div class="btn-group btn-group-info">
+                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                          Ações
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Editar minha conta</a></li>
+                          <li><a href="#">Logout</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>11234567</td>
+                    <td>Raquel Janissesk-Muniz</td>
+                    <td>Geórgia Janissesk-Muniz</td>
+                    <td>18/04/2012</td>
+                    <td>Sim</td>
+                    <td>
+                      <div class="btn-group btn-group-info">
+                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                          Ações
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Editar minha conta</a></li>
+                          <li><a href="#">Logout</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                
+              </table>
+            </div>
+            
+          </div><!-- /.row -->
+        </div><!-- /.information_body -->
+ 
+      </div><!-- /.row -->
 
-      <div class="row show-grid">
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-        <div class="span1">1</div>
-      </div>
-      <div class="row show-grid">
-        <div class="span4">4</div>
-        <div class="span4">4</div>
-        <div class="span4">4</div>
-      </div>
-      <div class="row show-grid">
-        <div class="span4">4</div>
-        <div class="span8">8</div>
-      </div>
-      <div class="row show-grid">
-        <div class="span6">6</div>
-        <div class="span6">6</div>
-      </div>
-      <div class="row show-grid">
-        <div class="span12">12</div>
-      </div>
-      <div class="row">
-        <div class="span4">
-          <p>The default grid system provided in Bootstrap utilizes <strong>12 columns</strong> that render out at widths of 724px, 940px (default without responsive CSS included), and 1170px. Below 767px viewports, the columns become fluid and stack vertically. </p>
-        </div><!-- /.span -->
-        <div class="span4">
-    <pre class="prettyprint linenums">
-    &lt;div class="row"&gt;
-      &lt;div class="span4"&gt;...&lt;/div&gt;
-      &lt;div class="span8"&gt;...&lt;/div&gt;
-    &lt;/div&gt;
-    </pre>
-        </div><!-- /.span -->
-        <div class="span4">
-          <p>As shown here, a basic layout can be created with two "columns", each spanning a number of the 12 foundational columns we defined as part of our grid system.</p>
-        </div><!-- /.span -->
-      </div><!-- /.row -->
-
-      <br>
-
-      <h2>Nesting columns</h2>
-      <div class="row">
-        <div class="span6">
-          <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
-          <h3>Example</h3>
-          <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
-          <div class="row show-grid">
-            <div class="span6">
-              Level 1 of column
-              <div class="row show-grid">
-                <div class="span3">
-                  Level 2
-                </div>
-                <div class="span3">
-                  Level 2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.span -->
-      </div><!-- /.row -->
-      
-      <h2>Nesting columns</h2>
-      <div class="row">
-        <div class="span6">
-          <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
-          <h3>Example</h3>
-          <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
-          <div class="row show-grid">
-            <div class="span6">
-              Level 1 of column
-              <div class="row show-grid">
-                <div class="span3">
-                  Level 2
-                </div>
-                <div class="span3">
-                  Level 2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.span -->
-      </div><!-- /.row -->
-      
-      <h2>Nesting columns</h2>
-      <div class="row">
-        <div class="span6">
-          <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
-          <h3>Example</h3>
-          <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
-          <div class="row show-grid">
-            <div class="span6">
-              Level 1 of column
-              <div class="row show-grid">
-                <div class="span3">
-                  Level 2
-                </div>
-                <div class="span3">
-                  Level 2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.span -->
-      </div><!-- /.row -->
-      
-      <h2>Nesting columns</h2>
-      <div class="row">
-        <div class="span6">
-          <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
-          <h3>Example</h3>
-          <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
-          <div class="row show-grid">
-            <div class="span6">
-              Level 1 of column
-              <div class="row show-grid">
-                <div class="span3">
-                  Level 2
-                </div>
-                <div class="span3">
-                  Level 2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.span -->
-      </div><!-- /.row -->
-      
-      <h2>Nesting columns</h2>
-      <div class="row">
-        <div class="span6">
-          <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
-          <h3>Example</h3>
-          <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
-          <div class="row show-grid">
-            <div class="span6">
-              Level 1 of column
-              <div class="row show-grid">
-                <div class="span3">
-                  Level 2
-                </div>
-                <div class="span3">
-                  Level 2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.span -->
-      </div><!-- /.row -->
     </section>
-  </div>
+  </div><!-- /.container -->
   
 </body>
 </html>
