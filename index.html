@@ -4,14 +4,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Sys Sphinx</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="js/bootstrap-dropdown.js"></script>
 	<script src="js/bootstrap-alert.js"></script>
-	<script>
-	$(document).ready(function() {
-	  
-	});
-	</script>
 </head>
 
 <body>
@@ -28,6 +29,7 @@
             <input type="text" name="search" class="span4" /> 
             <input type="submit" value="Filtrar por nome" class="btn btn-info" />
           </form>
+          <!-- quando nao tiver o form, deve ser &nbsp; -->
         </div>
         
         <div class="btn-group span3 offset1">
@@ -53,11 +55,15 @@
         <div class="span2">
           <ul id="left_menu" class="unstyled">
             <li><a href="#"><i class="icon-home"></i>Dashboard</a></li>
-            <li><a href="#"><i class="icon-list-alt"></i>Propostas</a></li>
-            <li><a href="#"><i class="icon-user"></i>Contatos</a></li>
-            <li><a href="#"><i class="icon-barcode"></i>Licenças</a></li>
+            <li><a href="#"><i class="icon-user"></i>Pessoas Físicas</a></li>
+            <li><a href="#"><i class="icon-briefcase"></i>Pessoas Jurídicas</a></li>
             <li><a href="#"><i class="icon-book"></i>Produtos/Serviços</a></li>
-            <li><a href="#"><i class="icon-wrench"></i>Cadastros gerais</a></li>
+            <li><a href="#"><i class="icon-barcode"></i>Licenças</a></li>
+            <li><a href="#"><i class="icon-list-alt"></i>Propostas</a></li>
+            <li><a href="#"><i class="icon-calendar"></i>Eventos</a></li>
+            <li class="separator"></li>
+            <li><a href="#"><i class="icon-wrench"></i>Valores de opções</a></li>
+            <li><a href="#"><i class="icon-th"></i>Usuários Sphinx</a></li>
           </ul>
         </div>
         <!--./menu -->
@@ -68,6 +74,8 @@
           
           <div class="row">
             <div class="span9 offset_custom_space">
+              <!-- content start -->
+              
               
               <div class="alert">
                 <button type="button" class="close" data-dismiss="alert">×</button>
@@ -75,35 +83,56 @@
               </div>
               
               <div class="well">
-                <a href="#" class="btn">Voltar</a>
+                <a href="#" class="btn"><i class="icon-chevron-left"></i> Voltar</a>
               </div>
               
               <!-- form -->
-              <form action="index_submit" method="POST" class="form-vertical">
-                <div class="span4">
-                  <label>ID do cliente
-                  <input type="text" name="search" class="" /> 
-                  </label>
-                  
-                  <label>Código
-                  <input type="text" name="search" class="" /> 
-                  </label>
+              <form action="index_submit" method="POST" class="">
+                <div class="row">
+                  <div class="span2">
+                    <label>Identificador
+                    <input type="text" name="search" class="" /> 
+                    </label>
+                  </div>  
+                  <div class="span2 offset1">
+                    <label>Nome do responsável
+                    <input type="text" name="search" class="" /> 
+                    </label>
+                  </div>
+                  <div class="span2 offset1">
+                    <label>Nome do cliente
+                    <input type="text" name="search" class="" /> 
+                    </label>
+                  </div>
                 </div>
-                <div class="span4">
-                  <label>Região
-                  <select name="search" class="">
-                    <option>Valor 1</option>
-                    <option>Valor 1</option>
-                    <option>Valor 1</option>
-                  </select> 
-                  </label>
-                  
-                  <label>Cliente
-                  <input type="text" name="search" class="" /> 
-                  </label>
+                
+                <div class="row">
+                  <div class="span2">
+                    <label>Data da proposta
+                    <input type="text" name="search" class="" /> 
+                    </label>
+                  </div>  
+                  <div class="span2 offset1">
+                    <label>ID do cliente
+                    <input type="text" name="search" class="" /> 
+                    </label>
+                  </div>
+                  <div class="span2 offset1">
+                    <label>Região
+                    <select name="">
+                      <option value="abc">ABC</option>
+                      <option value="ab2">ABC2</option>
+                    </select>
+                    </label>
+                  </div>
                 </div>
+                
+                <input type="submit" value="Filtrar propostas" class="btn" />
+                <a href="" class="btn btn-danger">Remover filtro</a>
               </form>
               <!--/.form -->
+              
+              <hr/>
               
               <table class="table table-striped">
                 <thead>
@@ -121,9 +150,9 @@
                   <tr>
                     <td>11234567</td>
                     <td>Raquel Janissesk-Muniz</td>
-                    <td>Geórgia Janissesk-Muniz</td>
+                    <td><a href="#">Geórgia Janissesk-Muniz</a></td>
                     <td>18/04/2012</td>
-                    <td>Sim</td>
+                    <td><span class="badge badge-success">Sim</span></td>
                     <td>
                       <div class="btn-group btn-group-info">
                         <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
@@ -131,8 +160,8 @@
                           <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a href="#">Editar minha conta</a></li>
-                          <li><a href="#">Logout</a></li>
+                          <li><a href="#">Editar</a></li>
+                          <li><a href="#">Deletar</a></li>
                         </ul>
                       </div>
                     </td>
@@ -143,7 +172,7 @@
                     <td>Raquel Janissesk-Muniz</td>
                     <td>Geórgia Janissesk-Muniz</td>
                     <td>18/04/2012</td>
-                    <td>Sim</td>
+                    <td><span class="badge badge-important">Não</span></td>
                     <td>
                       <div class="btn-group btn-group-info">
                         <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
@@ -151,8 +180,8 @@
                           <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a href="#">Editar minha conta</a></li>
-                          <li><a href="#">Logout</a></li>
+                          <li><a href="#">Editar</a></li>
+                          <li><a href="#">Deletar</a></li>
                         </ul>
                       </div>
                     </td>
@@ -160,9 +189,14 @@
                 </tbody>
                 
               </table>
+              
+              
+              <!--/.content end -->
             </div>
             
           </div><!-- /.row -->
+          
+          
         </div><!-- /.information_body -->
  
       </div><!-- /.row -->

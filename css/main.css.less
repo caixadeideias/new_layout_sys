@@ -7,6 +7,7 @@
 @import "../less/sprites";
 @import "../less/layouts";
 @import "../less/close";
+@import "../less/labels-badges";
 
 // Components
 @import "../less/buttons";
@@ -19,8 +20,22 @@
 @import "../less/button-groups";
 
 // Custom
+// General usage
+
 a {
   &:hover, &:link, &:visited, &:active { text-decoration: none; }
+}
+
+hr {
+  margin: @baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
+}
+
+body {
+  font: 12px Helvetica;
+  background-color: #f3f1ec;
 }
 
 .offset_custom_space {
@@ -43,6 +58,9 @@ ol.unstyled {
   list-style: none;
 }
 
+
+// Menus
+
 ul#left_menu {
   font-size: 13px;
   font-weight: bold; 
@@ -63,19 +81,15 @@ ul#left_menu {
   }
 }
 
-#logo {
-  margin-top: -6px;
+li.separator {
+  border-bottom: 1px solid #E2E4E5;
 }
 
 #top_menu {
   padding-top: 15px;
 }
 
-div#information_body {
-  .border-radius(6px);
-  background-color: white; 
-  .box-shadow(1px 1px 8px #ccc);
-}
+// Top
 
 .navbar-fixed-top {
 	top: 0px;
@@ -88,14 +102,21 @@ div#information_body {
 .navbar {
 	width: 100%;
 	background-color: #673d94;
-	min-height: 30px;
+	min-height: 60px;
 }
+
+img#logo {
+  margin-top: -6px;
+}
+
+// Content
 
 section#content {
-	margin-top: 80px;
+	padding-top: 80px;
 }
 
-body {
-  font: 12px Helvetica;
-  background-color: #f3f1ec;
+div#information_body {
+  .border-radius(6px);
+  background-color: white; 
+  .box-shadow(1px 1px 8px #ccc);
 }
