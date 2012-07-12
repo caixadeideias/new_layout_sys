@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Sys Sphinx</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row" id="top_menu">
+        <div class="span2">
+          <img src="img/logo_sphinx.png" id="logo" />
+        </div>
+      
+        <div class="span6">
+          <form action="index_submit" method="POST" class="form-search">
+            <input type="text" name="search" class="span4" /> 
+            <input type="submit" value="Filtrar por nome" class="btn btn-info" />
+          </form>
+          <!-- quando nao tiver o form, deve ser &nbsp; -->
+        </div>
+        
+        <div class="btn-group span3 offset1">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Raquel Janissek Muniz
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Editar minha conta</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    
+    <section id="content">
+      <div class="row">
+        
+        <!-- menu -->
+        <div class="span2">
+          <ul id="left_menu" class="unstyled">
+            <li><a href="#"><i class="icon-home"></i>Dashboard</a></li>
+            <li><a href="#"><i class="icon-user"></i>Pessoas Físicas</a></li>
+            <li><a href="#"><i class="icon-briefcase"></i>Pessoas Jurídicas</a></li>
+            <li><a href="#"><i class="icon-book"></i>Produtos/Serviços</a></li>
+            <li><a href="#"><i class="icon-barcode"></i>Licenças</a></li>
+            <li><a href="#"><i class="icon-list-alt"></i>Propostas</a></li>
+            <li><a href="#"><i class="icon-calendar"></i>Eventos</a></li>
+            <li class="separator"></li>
+            <li><a href="#"><i class="icon-wrench"></i>Valores de opções</a></li>
+            <li><a href="#"><i class="icon-th"></i>Usuários Sphinx</a></li>
+          </ul>
+        </div>
+        <!--./menu -->
+        
+        <!-- .information_body -->
+        <div class="span10" id="information_body">
+          <h1>Cadastro de nova pessoa jurídica</h1>
+          
+          <div class="row">
+            <div class="span9 offset_custom_space">
+              <!-- content start -->
+              
+              <a href="#" class="btn"><i class="icon-chevron-left"></i> Voltar</a>
+              
+              <hr/>
+              
+              <div id="error_explanation" class="alert alert-error">
+              		<a class="close" data-dismiss="alert" href="#">×</a>
+              		<p><strong>Falha ao enviar formulário.</strong> Por favor, verifique o seguinte:</p>
+                  <ul>
+                    	<li>Nome não pode ficar em branco</li>
+                  </ul>
+                </div>
+              
+              <!-- form -->
+              <form action="index_submit" method="POST" class="">
+                
+                <fieldset>
+                  <legend>Informações básicas</legend>
+                  <div class="row">
+                    <div class="span2">
+                      <label>Nome
+                      <input type="text" name="search" class="span4" /> 
+                      </label>
+                    </div>  
+                    <div class="span2 offset3">
+                      <label>CNPJ
+                      <input type="text" name="search" class="span4" /> 
+                      </label>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="span2">
+                      <label>Razão social
+                      <input type="text" name="search" class="span4" /> 
+                      </label>
+                    </div>  
+                    <div class="span2 offset3">
+                      <label>Inscrição estadual
+                      <input type="text" name="search" class="span4" /> 
+                      </label>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="span2">
+                      <label>Mantenedora
+                      <input type="text" name="search" class="span4" /> 
+                      </label>
+                    </div>  
+                    <div class="span2 offset3">
+                      <label>Porte
+                      <select name="">
+                        <option value="abc">ABC</option>
+                        <option value="ab2">ABC2</option>
+                      </select>
+                      </label>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="span2">
+                      <label>Contato principal
+                      <input type="text" name="search" class="span4" /> 
+                      </label>
+                    </div>  
+                    <div class="span2 offset3">
+                      <label>Setor de atividade
+                      <select name="">
+                        <option value="abc">ABC</option>
+                        <option value="ab2">ABC2</option>
+                      </select>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <legend>Informações de contato</legend>
+                  
+                  
+                  <fieldset id="contact_phones" class="subtopic">
+                    <legend>Telefones</legend>
+                    
+                      <div class="row">
+                        <div class="span1 remove_me">
+                          <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                        </div>
+                        <div class="span2">
+                          <label>Tipo
+                          <select name="">
+                            <option value="abc">ABC</option>
+                            <option value="ab2">ABC2</option>
+                          </select>
+                          </label>
+                        </div>  
+                        <div class="span2 offset2">
+                          <label>Número
+                          <input type="text" name="search" class="span3" /> 
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="span1 remove_me">
+                          <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                        </div>
+                        <div class="span2">
+                          <label>Tipo
+                          <select name="">
+                            <option value="abc">ABC</option>
+                            <option value="ab2">ABC2</option>
+                          </select>
+                          </label>
+                        </div>  
+                        <div class="span2 offset2">
+                          <label>Número
+                          <input type="text" name="search" class="span3" /> 
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div class="well">
+                          <a href="#" class="btn btn-success"><i class="icon-plus icon-white"></i> Telefone</a>
+                      </div>
+                      
+                  </fieldset>
+                
+                  <fieldset id="contact_emails" class="subtopic">
+                    <legend>E-mails</legend>
+                    
+                      <div class="row">
+                        <div class="span1 remove_me">
+                          <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                        </div>
+                        <div class="span2">
+                          <label>Tipo
+                          <select name="">
+                            <option value="abc">ABC</option>
+                            <option value="ab2">ABC2</option>
+                          </select>
+                          </label>
+                        </div>  
+                        <div class="span2 offset2">
+                          <label>E-mail
+                          <input type="text" name="search" class="span3" /> 
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="span1 remove_me">
+                          <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                        </div>
+                        <div class="span2">
+                          <label>Tipo
+                          <select name="">
+                            <option value="abc">ABC</option>
+                            <option value="ab2">ABC2</option>
+                          </select>
+                          </label>
+                        </div>  
+                        <div class="span2 offset2">
+                          <label>E-mail
+                          <input type="text" name="search" class="span3" /> 
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div class="well">
+                          <a href="#" class="btn btn-success"><i class="icon-plus icon-white"></i> E-mail</a>
+                      </div>
+                      
+                  </fieldset>
+                  
+                   <fieldset id="contact_sites" class="subtopic">
+                      <legend>Sites</legend>
+
+                        <div class="row">
+                          <div class="span1 remove_me">
+                            <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                          </div>
+                          <div class="span2">
+                            <label>Tipo
+                            <select name="">
+                              <option value="abc">ABC</option>
+                              <option value="ab2">ABC2</option>
+                            </select>
+                            </label>
+                          </div>  
+                          <div class="span2 offset2">
+                            <label>URL
+                            <input type="text" name="search" class="span3" /> 
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="span1 remove_me">
+                            <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                          </div>
+                          <div class="span2">
+                            <label>Tipo
+                            <select name="">
+                              <option value="abc">ABC</option>
+                              <option value="ab2">ABC2</option>
+                            </select>
+                            </label>
+                          </div>  
+                          <div class="span2 offset2">
+                            <label>URL
+                            <input type="text" name="search" class="span3" /> 
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="well">
+                            <a href="#" class="btn btn-success"><i class="icon-plus icon-white"></i> Site</a>
+                        </div>
+
+                    </fieldset>
+                  
+                    <fieldset id="contact_addresses" class="subtopic">
+                       <legend>Endereços</legend>
+
+                        <div class="some_address">
+                          
+                         <div class="row">
+                           <div class="span1 remove_me">
+                             <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                           </div>
+                           <div class="span2">
+                             <label>Tipo
+                             <select name="">
+                               <option value="abc">ABC</option>
+                               <option value="ab2">ABC2</option>
+                             </select>
+                             </label>
+                           </div>  
+                           <div class="span2 offset2">
+                             <label>CEP
+                             <input type="text" name="search" class="span3" /> 
+                             </label>
+                           </div>
+                         </div>
+                         
+                         <div class="row">
+                           <div class="span2 offset1">
+                             <label>País
+                              <input type="text" name="search" class="span3" /> 
+                              </label>
+                           </div>  
+                           <div class="span3 offset2">
+                             <label>Cidade
+                             <input type="text" name="search" class="span3" /> 
+                             </label>
+                           </div>
+                         </div>
+                         
+                         <div class="row">
+                           <div class="span2 offset1">
+                             <label>Estado
+                              <input type="text" name="search" class="span3" /> 
+                              </label>
+                           </div>  
+                           <div class="span3 offset2">
+                             <label>Bairro
+                             <input type="text" name="search" class="span3" /> 
+                             </label>
+                           </div>
+                         </div>
+                         
+                         <div class="row">
+                           <div class="span2 offset1">
+                             <label>Endereço
+                              <input type="text" name="search" class="span3" /> 
+                              </label>
+                           </div>  
+                         </div>
+                         
+                        </div><!-- /.some_address -->
+                        
+                         <div class="well">
+                             <a href="#" class="btn btn-success"><i class="icon-plus icon-white"></i> Endereço</a>
+                         </div>
+
+                     </fieldset>
+                     
+                     <fieldset>
+                       <legend>Informações internas</legend>
+                       
+                       <div class="row">
+                         <div class="span1">
+                           <label class="control-label" for="optionsCheckbox"><br/> Ativo?</label>
+                             <label class="checkbox">
+                               <input type="checkbox" id="optionsCheckbox" value="option1" />
+                             </label>
+                         </div> 
+                         <div class="span1">
+                           <label class="control-label" for="optionsCheckbox2"><br/> VIP?</label>
+                             <label class="checkbox">
+                               <input type="checkbox" id="optionsCheckbox2" value="option1" />
+                             </label>
+                         </div>
+                         <div class="span1">
+                           <label class="control-label" for="optionsCheckbox3">Interessa visita?</label>
+                             <label class="checkbox">
+                               <input type="checkbox" id="optionsCheckbox3" value="option1" />
+                             </label>
+                         </div>
+                         <div class="span1">
+                           <label class="control-label" for="optionsCheckbox4">Interessa proposta?</label>
+                             <label class="checkbox">
+                               <input type="checkbox" id="optionsCheckbox4" value="option1" />
+                             </label>
+                         </div>
+                         <div class="span1">
+                           <label class="control-label" for="optionsCheckbox4">Solicitou exclusão?</label>
+                             <label class="checkbox">
+                               <input type="checkbox" id="optionsCheckbox4" value="option1" />
+                             </label>
+                         </div>
+                         <div class="span1">
+                           <label class="control-label" for="optionsCheckbox4">Baixou demo?</label>
+                             <label class="checkbox">
+                               <input type="checkbox" id="optionsCheckbox4" value="option1" />
+                             </label>
+                         </div>
+                        </div>
+                        
+                        <hr/>
+                        
+                       <div class="row">
+                         <div class="span2">
+                           <label>Gestor de contas
+                           <input type="text" name="search" class="span4" /> 
+                           </label>
+                         </div>  
+                         <div class="span2 offset3">
+                           <label>Como nos encontrou
+                           <input type="text" name="search" class="span4" /> 
+                           </label>
+                         </div>
+                       </div>
+
+                       <div class="row">
+                         <div class="span2">
+                          <label>Entrou em contato via
+                          <select name="">
+                            <option value="abc">ABC</option>
+                            <option value="ab2">ABC2</option>
+                          </select>
+                          </label>
+                         </div>  
+                       </div>
+
+                           
+                     </fieldset>
+
+                     
+                     <div class="form-actions">
+                       <button type="submit" class="btn btn-primary btn-large">Salvar</button>
+                     </div>
+
+                </fieldset>
+                
+              </form>
+              <!--/.form -->
+              
+              
+            </div><!--/.content end -->
+            
+          </div><!-- /.row -->
+          
+          
+        </div><!-- /.information_body -->
+ 
+      </div><!-- /.row -->
+
+    </section>
+  </div><!-- /.container -->
+  
+</body>
+</html>
