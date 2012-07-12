@@ -26,6 +26,10 @@ a {
   &:hover, &:link, &:visited, &:active { text-decoration: none; }
 }
 
+.clear {
+  clear: both;
+}
+
 hr {
   margin: @baseLineHeight 0;
   border: 0;
@@ -50,6 +54,11 @@ h1 {
   color: #666666;
   text-shadow: -1px -2px 1px white;
   background: white url('../img/bg_h1.png') repeat-x top center;
+}
+
+h2 {
+  color: #673d94;
+  font-weight: normal;
 }
 
 ul.unstyled,
@@ -89,6 +98,57 @@ li.separator {
   padding-top: 15px;
 }
 
+// Dashboard
+
+div#dashboard_quick_access {
+  margin: 20px auto;
+}
+
+a.dashboard_button {
+  display: block;
+  float: left;
+  background: url("../img/bg_dashboard_button.png") repeat-x top center;
+  border: 1px solid #bbb;
+  width: 118px;
+  margin-left: 15px;
+  min-height: 118px;
+  .border-radius(5px);
+  text-align: center;
+  color: #333333;
+  font-size: 13px;
+  
+  span.icon {
+    margin: 10px auto;
+    width: 100px;
+    display: block;
+    padding-top: 60px;
+  }
+  
+  span.icon-person {
+    background: url("../img/icon_person.png") no-repeat top center;
+  }
+  
+  span.icon-company {
+    background: url("../img/icon_company.png") no-repeat top center;
+  }
+  
+  span.icon-configuration {
+    background: url("../img/icon_configuration.png") no-repeat top center;
+  }
+  
+  span.icon-proposal {
+    background: url("../img/icon_proposal.png") no-repeat top center;
+  }
+  
+  span.icon-report {
+    background: url("../img/icon_report.png") no-repeat top center;
+  }
+  
+  span.icon-products {
+    background: url("../img/icon_products.png") no-repeat top center;
+  }
+}
+
 // Top
 
 .navbar-fixed-top {
@@ -113,6 +173,7 @@ img#logo {
 
 section#content {
 	padding-top: 80px;
+	margin-bottom: 20px;
 }
 
 div#information_body {

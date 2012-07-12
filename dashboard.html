@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Sys Sphinx</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row" id="top_menu">
+        <div class="span2">
+          <img src="img/logo_sphinx.png" id="logo" />
+        </div>
+      
+        <div class="span6">
+          <form action="index_submit" method="POST" class="form-search">
+            <input type="text" name="search" class="span4" /> 
+            <input type="submit" value="Filtrar por nome" class="btn btn-info" />
+          </form>
+          <!-- quando nao tiver o form, deve ser &nbsp; -->
+        </div>
+        
+        <div class="btn-group span3 offset1">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            Raquel Janissek Muniz
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Editar minha conta</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    
+    <section id="content">
+      <div class="row">
+        
+        <!-- menu -->
+        <div class="span2">
+          <ul id="left_menu" class="unstyled">
+            <li><a href="#"><i class="icon-home"></i>Dashboard</a></li>
+            <li><a href="#"><i class="icon-user"></i>Pessoas Físicas</a></li>
+            <li><a href="#"><i class="icon-briefcase"></i>Pessoas Jurídicas</a></li>
+            <li><a href="#"><i class="icon-book"></i>Produtos/Serviços</a></li>
+            <li><a href="#"><i class="icon-barcode"></i>Licenças</a></li>
+            <li><a href="#"><i class="icon-list-alt"></i>Propostas</a></li>
+            <li><a href="#"><i class="icon-calendar"></i>Eventos</a></li>
+            <li class="separator"></li>
+            <li><a href="#"><i class="icon-wrench"></i>Valores de opções</a></li>
+            <li><a href="#"><i class="icon-th"></i>Usuários Sphinx</a></li>
+          </ul>
+        </div>
+        <!--./menu -->
+        
+        <!-- .information_body -->
+        <div class="span10" id="information_body">
+          <h1>Bem vindo ao sistema de gestão interno da SPHINX Brasil.</h1>
+          
+          <div class="row">
+            <div class="span9 offset_custom_space">
+              <!-- content start -->
+              
+              <div id="dashboard_quick_access">              
+                <a href="#" class="dashboard_button">
+                  <span class="icon icon-person">Adicionar Pessoa Física</span>
+                </a>
+              
+                <a href="#" class="dashboard_button">
+                  <span class="icon icon-company">Adicionar Pessoa Jurídica</span>
+                </a>
+              
+                <a href="#" class="dashboard_button">
+                  <span class="icon icon-report">Relatórios</span>
+                </a>
+              
+                <a href="#" class="dashboard_button">
+                  <span class="icon icon-products">Produtos e Serviços</span>
+                </a>
+              
+                <a href="#" class="dashboard_button">
+                  <span class="icon icon-proposal">Propostas</span>
+                </a>
+              </div>
+              
+              <div class="clear"></div>
+                            
+              <hr/>
+              
+              <h2>Últimos contatos cadastrados</h2>
+              
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Estado</th>
+                    <th>Empresa</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>Raquel Janissesk-Muniz</td>
+                    <td><a href="#">Geórgia Janissesk-Muniz</a></td>
+                    <td>18/04/2012</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>5</td>
+                    <td>Raquel Janissesk-Muniz</td>
+                    <td>Geórgia Janissesk-Muniz</td>
+                    <td>18/04/2012</td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              
+              <h2>Últimas propostas cadastradas</h2>
+              
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Estado</th>
+                    <th>Empresa</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Raquel Janissesk-Muniz</td>
+                    <td><a href="#">Geórgia Janissesk-Muniz</a></td>
+                    <td>18/04/2012</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>2</td>
+                    <td>Raquel Janissesk-Muniz</td>
+                    <td>Geórgia Janissesk-Muniz</td>
+                    <td>18/04/2012</td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              
+              
+              <!--/.content end -->
+            </div>
+            
+          </div><!-- /.row -->
+          
+          
+        </div><!-- /.information_body -->
+ 
+      </div><!-- /.row -->
+
+    </section>
+  </div><!-- /.container -->
+  
+</body>
+</html>
